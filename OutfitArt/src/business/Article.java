@@ -35,6 +35,11 @@ public class Article extends Node{
 		this(type, rgb);
 		this.ocassion = ocassion;
 	}
+        
+        public Article(int type, Color rgb, String ocassion, String description){
+            this(type,rgb,ocassion);
+            this.description=description;
+        }
 
     public Color getColor() {
         return color;
