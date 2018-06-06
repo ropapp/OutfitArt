@@ -33,7 +33,7 @@ public class ArticleList {
                     // llegar al final de la lista.
                     for (int i = 0; i != pos; i++) {
                         if(aux!=null)
-                            aux=aux.next;
+                            aux=(Article)aux.next;
                         else
                             return null;    
                     }
@@ -49,7 +49,7 @@ public class ArticleList {
 				  bw.write("Articles: \n");
 				  while(temp != null){
 					  bw.write(temp.toString() );
-					  temp=temp.next;
+					  temp=(Article)temp.next;
 				  }
 				  bw.flush();
 			  } 
