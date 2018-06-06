@@ -13,6 +13,7 @@ public class Article extends Node{
 	Color color;
 	String description="";
 	float[] metadata=new float[]{0,0};
+        Article next;
 	/**
 	 * Creates a new clothing article
 	 * @param type 		1	jacket

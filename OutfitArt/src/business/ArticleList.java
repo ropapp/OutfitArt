@@ -33,7 +33,7 @@ public class ArticleList {
                     // llegar al final de la lista.
                     for (int i = 0; i != pos; i++) {
                         if(aux!=null)
-                            aux=(Article)aux.next;
+                            aux=aux.next;
                         else
                             return null;    
                     }
