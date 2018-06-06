@@ -1,6 +1,6 @@
 package business;
 
-public class User extends Node{
+public class User{
 	String name;
 	char gender; //Non-binary. Remember gender is an spectra :)
 	

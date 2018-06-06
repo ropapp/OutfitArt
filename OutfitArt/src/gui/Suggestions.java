@@ -9,7 +9,6 @@ import gui.Home;
 import javax.swing.ImageIcon;
 import business.Article;
 import business.ArticleList;
-import business.Outfit;
 /**
  *
  * @author FAMILA BOHORQUEZ

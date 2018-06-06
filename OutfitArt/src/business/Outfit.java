@@ -1,6 +1,6 @@
-package business;
+/*package business;
 
-public class Outfit extends Node{
+public class Outfit {
 	String name;
 	
 	
@@ -28,4 +28,4 @@ public class Outfit extends Node{
 	
 	
 	
-}
+}*/

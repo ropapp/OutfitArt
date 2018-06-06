@@ -175,7 +175,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_bAddActionPerformed
 
     private void bSuggestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSuggestionActionPerformed
-        Suggestions obj=new Suggestions();
+        Style obj=new Style();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_bSuggestionActionPerformed

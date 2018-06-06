@@ -9,8 +9,8 @@ import gui.Home;
 import javax.swing.ImageIcon;
 import business.Article;
 import business.ArticleList;
-import business.Outfit;
 import java.awt.event.KeyEvent;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 /**
@@ -47,15 +47,17 @@ public class WardRobe extends javax.swing.JFrame {
     
     public void MostrarDatosArmario(){
         Article a;
+        JLabel l = new JLabel();
         for (int i = 0; i < Home.AL.getSize(); i++) {
             a = Home.AL.buscar(i);
+            l.setBackground(a.getColor());
             if(a != null){
                 modelArmario.insertRow(con1, new Object[]{});
                 modelArmario.setValueAt(i, con1, 0);
                 modelArmario.setValueAt(a.getType(), con1, 1);
-                modelArmario.setValueAt(a.getColor, con1, 2);
-                modelArmario.setValueAt(a.getOcasion, con1, 3);
-                modelArmario.setValueAt(a.getDescription, con1, 4);
+                modelArmario.setValueAt(l, con1, 2);
+                modelArmario.setValueAt(a.getOcassion(), con1, 3);
+                modelArmario.setValueAt(a.getDescription(), con1, 4);
             }
         }
     }
