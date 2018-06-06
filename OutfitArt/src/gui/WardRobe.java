@@ -7,9 +7,9 @@ package gui;
 
 import gui.Home;
 import javax.swing.ImageIcon;
-import Clases.Article;
-import Clases.ArticleList;
-import Clases.Outfit;
+import business.Article;
+import business.ArticleList;
+import business.Outfit;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -52,10 +52,10 @@ public class WardRobe extends javax.swing.JFrame {
             if(a != null){
                 modelArmario.insertRow(con1, new Object[]{});
                 modelArmario.setValueAt(i, con1, 0);
-                modelArmario.setValueAt(a.tipo, con1, 1);
-                modelArmario.setValueAt(a.color, con1, 2);
-                modelArmario.setValueAt(a.ocasion, con1, 3);
-                modelArmario.setValueAt(a.descripcion, con1, 4);
+                modelArmario.setValueAt(a.getType(), con1, 1);
+                modelArmario.setValueAt(a.getColor, con1, 2);
+                modelArmario.setValueAt(a.getOcasion, con1, 3);
+                modelArmario.setValueAt(a.getDescription, con1, 4);
             }
         }
     }

@@ -7,9 +7,9 @@ package gui;
 
 import gui.Home;
 import javax.swing.ImageIcon;
-import Clases.Article;
-import Clases.ArticleList;
-import Clases.Outfit;
+import business.Article;
+import business.ArticleList;
+import business.Outfit;
 /**
  *
  * @author FAMILA BOHORQUEZ

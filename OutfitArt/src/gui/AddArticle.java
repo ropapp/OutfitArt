@@ -287,12 +287,28 @@ public class AddArticle extends javax.swing.JFrame {
 
     private void bAddNewArticleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddNewArticleActionPerformed
         Color color = jColorChooser1.getColor();
-        String tipo = tipoIn.getSelectedItem().toString();
-	String ocasion = ocasionIn.getSelectedItem().toString();
-        String descripcion = descripcionIn.getText();  
+        int type = 0;
+        String a = tipoIn.getSelectedItem().toString();
+        switch(a){
+            case ("Zapatos/Tenis/Botas"):
+                type=1;
+                break;
+            case ("Pantalon/Jean/Sudadera/Pantaloneta"):
+                type=2;
+                break;
+            case ("Camisa/Camiseta"):
+                type=3;
+                break;
+            case ("Buso/Saco/Chaqueta"):
+                type=4;
+                break;
+        }    
+                
+	String ocasion = ocasionIn.getSelectedItem().toString(); 
+        String description = descripcionIn.getText();
         Image imagen = new ImageIcon(dirreccion.getText()).getImage();
         
-        Article article = new Article(tipo, color, descripcion);
+        Article article = new Article(type, color, ocasion, description);
         
         AL.insertAtEnd(article);
         

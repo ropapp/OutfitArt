@@ -5,7 +5,7 @@
  */
 package gui;
 
-import Interfaz.Suggestions;
+import gui.Suggestions;
 import gui.Home;
 
 /**
