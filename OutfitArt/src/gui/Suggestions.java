@@ -9,6 +9,10 @@ import gui.Home;
 import javax.swing.ImageIcon;
 import business.Article;
 import business.ArticleList;
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author FAMILA BOHORQUEZ
@@ -172,7 +176,14 @@ public class Suggestions extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-    Home obj=new Home();
+    Home obj = null;
+        try {
+            obj = new Home();
+        } catch (IOException ex) {
+            Logger.getLogger(Suggestions.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(Suggestions.class.getName()).log(Level.SEVERE, null, ex);
+        }
         obj.setVisible(true);
         dispose();      
     }//GEN-LAST:event_volverActionPerformed

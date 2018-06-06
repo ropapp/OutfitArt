@@ -14,19 +14,27 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import business.Article;
 import business.ArticleList;
+import data.DataSet;
+import data.FileManager;
 import gui.Suggestions;
 import gui.WardRobe;
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 //IMPORTAR LAS CLASES CREADAS EN OTROS PACKAGES
 
 
 public class Home extends javax.swing.JFrame {
-
+        
     public static ArticleList AL = new ArticleList();
     //Lista que contiene todos los añadidos
     
-    public Home() {
+    public Home() throws IOException, ParseException {
         initComponents();
+        //DataSet.saveList(AL, "list.txt");
+        AL = FileManager.loadList("list.txt");
         getContentPane().setBackground(new java.awt.Color(102,102,102));
         setResizable(false);
         setLocationRelativeTo(null);
@@ -187,6 +195,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_bWardRobeActionPerformed
 
     private void closeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeActionPerformed
+       
         dispose();
     }//GEN-LAST:event_closeActionPerformed
 
@@ -223,7 +232,13 @@ public class Home extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Home().setVisible(true);
+                try {
+                    new Home().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ParseException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

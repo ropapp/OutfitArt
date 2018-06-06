@@ -8,10 +8,16 @@ package gui;
 import javax.swing.ImageIcon;
 import business.Article;
 import business.ArticleList;
+import data.DataSet;
+import data.FileManager;
 import gui.Home;
 import static gui.Home.AL;
 import java.awt.Color;
 import java.awt.Image;
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 /**
  *
@@ -306,6 +312,11 @@ public class AddArticle extends javax.swing.JFrame {
         Article article = new Article(type, color, ocasion, description);
         
         AL.insertAtEnd(article);
+        try {
+            FileManager.saveList(AL, "list.txt");
+        } catch (IOException ex) {
+            Logger.getLogger(AddArticle.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         AddArticle obj=new AddArticle();
         obj.setVisible(true);
@@ -313,7 +324,14 @@ public class AddArticle extends javax.swing.JFrame {
     }//GEN-LAST:event_bAddNewArticleActionPerformed
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-        Home obj=new Home();
+        Home obj = null;
+        try {
+            obj = new Home();
+        } catch (IOException ex) {
+            Logger.getLogger(AddArticle.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(AddArticle.class.getName()).log(Level.SEVERE, null, ex);
+        }
         obj.setVisible(true);
         dispose();        
     }//GEN-LAST:event_volverActionPerformed

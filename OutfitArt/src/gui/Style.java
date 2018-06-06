@@ -5,6 +5,10 @@
  */
 package gui;
 
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 
 /**
@@ -253,13 +257,27 @@ public class Style extends javax.swing.JFrame {
     }//GEN-LAST:event_bUniversityActionPerformed
 
     private void volver4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver4ActionPerformed
-        Home obj=new Home();
+        Home obj = null;
+        try {
+            obj = new Home();
+        } catch (IOException ex) {
+            Logger.getLogger(Style.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(Style.class.getName()).log(Level.SEVERE, null, ex);
+        }
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_volver4ActionPerformed
 
     private void volver5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver5ActionPerformed
-        Home obj=new Home();
+        Home obj = null;
+        try {
+            obj = new Home();
+        } catch (IOException ex) {
+            Logger.getLogger(Style.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(Style.class.getName()).log(Level.SEVERE, null, ex);
+        }
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_volver5ActionPerformed

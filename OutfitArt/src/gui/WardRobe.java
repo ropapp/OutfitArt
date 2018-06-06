@@ -10,6 +10,10 @@ import javax.swing.ImageIcon;
 import business.Article;
 import business.ArticleList;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -49,7 +53,7 @@ public class WardRobe extends javax.swing.JFrame {
         Article a;
         JLabel l = new JLabel();
         for (int i = 0; i < Home.AL.getSize(); i++) {
-            a = Home.AL.buscar(i);
+            a = Home.AL.search(i);
             l.setBackground(a.getColor());
             if(a != null){
                 modelArmario.insertRow(con1, new Object[]{});
@@ -199,7 +203,14 @@ public class WardRobe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-        Home obj=new Home();
+        Home obj = null;
+        try {
+            obj = new Home();
+        } catch (IOException ex) {
+            Logger.getLogger(WardRobe.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(WardRobe.class.getName()).log(Level.SEVERE, null, ex);
+        }
         obj.setVisible(true);
         dispose(); 
     }//GEN-LAST:event_volverActionPerformed

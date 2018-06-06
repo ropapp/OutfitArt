@@ -42,6 +42,8 @@ public class Article{
             this(type,rgb,ocassion);
             this.description=description;
         }
+        
+        public Article(){}
 
     public Color getColor() {
         return color;
