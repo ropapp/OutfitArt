@@ -11,16 +11,19 @@ import java.awt.Color;
 public class Article extends Node{
 	int type;
 	Color color;
-	String description="";
+	String ocassion="";
 	float[] metadata=new float[]{0,0};
         Article next;
+        String description="";
+        
 	/**
 	 * Creates a new clothing article
-	 * @param type 		1	jacket
-	 * 					2	shirt/blouse
-	 * 					3	pants/troussers
-	 * 					4	footwear
-	 * @param Color ans instance of java.awt.Color
+	 * @param type 		<ul> <li>1	jacket
+	 * 				<li>	2	shirt/blouse
+	 * 				<li>	3	pants/troussers
+	 * 				<li>	4	footwear
+         * </ul>
+	 * @param color an instance of java.awt.Color
 	 */
 	public Article(int type, Color color) {
 		super();
@@ -28,10 +31,82 @@ public class Article extends Node{
 		this.color= color;
 	}
 	
-	public Article(int type, Color rgb, String descriprion) {
+	public Article(int type, Color rgb, String ocassion) {
 		this(type, rgb);
-		this.description = description;
+		this.ocassion = ocassion;
 	}
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public String getOcassion() {
+        return ocassion;
+    }
+
+    public void setOcassion(String ocassion) {
+        this.ocassion = ocassion;
+    }
+
+    public float[] getMetadata() {
+        return metadata;
+    }
+
+    public void setMetadata(float[] metadata) {
+        this.metadata = metadata;
+    }
+
+    public Article getNext() {
+        return next;
+    }
+
+    public void setNext(Article next) {
+        this.next = next;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Node getPrev() {
+        return prev;
+    }
+
+    public void setPrev(Node prev) {
+        this.prev = prev;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public float[] getMetadata() {
+        return metadata;
+    }
+
+    public void setMetadata(float[] metadata) {
+        this.metadata = metadata;
+    }
 	
         
 
@@ -89,7 +164,7 @@ public class Article extends Node{
 	}
 	
 	public static float matchStyle(Article a1, Article a2) {
-		return a1.description.equals(a2.description)?1.0f:0.0f;
+		return a1.ocassion.equals(a2.ocassion)?1.0f:0.0f;
 	}
 	
 	/**
@@ -105,12 +180,12 @@ public class Article extends Node{
 	public int getType() {
 		return type;
 	}
-
+        
 	public void setType(int type) {
 		this.type = type;
 	}
 
 	public String toString() {
-		return this.description;
+		return this.ocassion;
 	}
 }

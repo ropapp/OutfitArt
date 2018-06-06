@@ -2,7 +2,7 @@ package business;
 
 class Node {
 	Node prev=null,next=null;
-	String id;
+	int id;
 	private List Adjacency=new List();
 	/**
 	 * This parameters intends to represent the intrinsic characteristics 
@@ -22,6 +22,10 @@ class Node {
 	public List getAdjacency() {
 		return Adjacency;
 	}
+        
+        public int getID(){
+            return id;
+        }
 
 }
 
@@ -68,10 +72,10 @@ public class List {
 	}
 	
 	//Dirty Linear Search:
-	public Node searchByID(String id) {
+	public Node searchByID(int id) {
 		Node temp = this.head;
 		while(temp!=null) {
-			if(temp.id.equals(id)) return temp;
+			if(temp.getID()==id) return temp;
 			temp=temp.next;
 		}
 		return null;

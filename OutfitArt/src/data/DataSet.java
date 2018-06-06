@@ -13,7 +13,7 @@ public class DataSet {
 			if((int) (Math.random()*10)%2==0) {
 				outfit1.put(a);
 			}
-			G.addArticle(a);
+			G.addArticle(a.getID());
 			double finish = System.currentTimeMillis();
 			System.out.println(a.toString()+" || EXE: "+Double.toString(finish-start));
 			
