@@ -11,24 +11,17 @@ public class ArticleList {
         int size = 0;
 
 		 public boolean isEmpty(){
-			  return head==null ? true : false;
-		   /**
-		   * if(head==null)
-		   * return true;
-		   * else
-		   * return false;
-		   */
+                    return size==0;
+		 
 		  }
                  
                 public int getSize(){
                     return size;
                 }
                 
-                public Article buscar(int pos){
+                public Article get(int pos){
                     // Crea una copia de la lista.
                     Article aux = head;
-                    // Bandera para indicar si el valor existe.
-                    boolean encontrado = false;
                     // Recorre la lista hasta encontrar el elemento o hasta 
                     // llegar al final de la lista.
                     for (int i = 0; i != pos; i++) {
@@ -39,6 +32,17 @@ public class ArticleList {
                     }
                     return aux;
                     
+                }
+                //Dirty linear Search
+                public Article search(int id){
+                    Article aux = head;
+                    while(aux!=null){
+                        if(aux.getID()==id)
+                            return aux;
+                        aux=aux.next;
+                    }
+                    //not found
+                    return null;
                 }
 
 		 public void printList(){
@@ -94,7 +98,13 @@ public class ArticleList {
                           size--;
 		  }
 
-                 
+                 public Article poll(){
+                     Article temp=this.head;
+                     head=temp.next;
+                     temp.next=null;
+                     this.insertAtEnd(temp);
+                     return temp;
+                }
                 public void delete(int posicion){
                     if(posicion>=0 && posicion<size){
                         if(posicion == 0){

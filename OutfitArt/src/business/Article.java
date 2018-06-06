@@ -10,11 +10,13 @@ import java.awt.Color;
  */
 public class Article{
 	int type;
+        int id;
 	Color color;
 	String ocassion="";
 	float[] metadata=new float[]{0,0};
         Article next;
         String description="";
+        EdgeList edges=new EdgeList();
         
 	/**
 	 * Creates a new clothing article
@@ -95,7 +97,7 @@ public class Article{
 	 * @return The matching score ranging from -1 to 1
 	 */
 	
-	/*public static float matchColor (Article a1, Article a2) {
+	public static float matchColor (Article a1, Article a2) {
 		double[] c1=HSL.fromRGB(a1.color);
 		double[] c2=HSL.fromRGB(a2.color);
 		float matchingScore=0f;
@@ -119,7 +121,8 @@ public class Article{
 		if (distance<=treshold) 
 			matchingScore+=(float)(1/Math.exp(-distance));
 		return matchingScore/4;
-	}*/
+	}
+
 	/**
 	 * Evaluates the Euclidean Distance between this metadata and other metadata, 
 	 * and gives a score ranging from 0 to 1.
@@ -149,8 +152,21 @@ public class Article{
 	 * @return randomArticle
 	 */
 	public static Article random() {
-            //TODO implement random article generation
-            return null;
+            Color c = HSL.randomColor();
+            int param = (int) ((Math.random()*4)+1);
+            String str="";//ocassion
+            switch(param){
+                case(1):
+                    str="Universidad";
+                case(2):
+                    str="Cita";
+                case(3):
+                    str="Evento Formal";
+                case(4):
+                    str="Deporte";
+            }
+            
+            return new Article(param,c,str);
 	}
 
 	public int getType() {
@@ -160,7 +176,12 @@ public class Article{
 	public void setType(int type) {
 		this.type = type;
 	}
+        
+        public int getID(){
+            return this.id;
+        }
 
+        @Override
 	public String toString() {
 		return this.ocassion;
 	}
