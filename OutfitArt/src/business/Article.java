@@ -84,29 +84,7 @@ public class Article extends Node{
         this.prev = prev;
     }
 
-    public Node getNext() {
-        return next;
-    }
-
-    public void setNext(Node next) {
-        this.next = next;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public float[] getMetadata() {
-        return metadata;
-    }
-
-    public void setMetadata(float[] metadata) {
-        this.metadata = metadata;
-    }
+    
 	
         
 
