@@ -43,15 +43,6 @@
                   <Component id="descripcionIn" alignment="1" max="32767" attributes="0"/>
                   <Component id="jLabel7" alignment="1" max="32767" attributes="0"/>
                   <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jLabel8" alignment="0" max="32767" attributes="0"/>
-                          <Component id="dirreccion" alignment="0" min="-2" pref="181" max="-2" attributes="0"/>
-                          <Component id="bLoadPhoto1" alignment="1" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="foto" max="32767" attributes="0"/>
-                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" max="32767" attributes="0"/>
@@ -67,6 +58,7 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="dirreccion" alignment="0" min="-2" pref="181" max="-2" attributes="0"/>
                           <Component id="tipoIn" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
                           <Component id="ocasionIn" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
                       </Group>
@@ -100,21 +92,9 @@
               <Component id="jLabel7" min="-2" pref="30" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="descripcionIn" min="-2" pref="41" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel8" min="-2" pref="30" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="bLoadPhoto1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Component id="dirreccion" min="-2" pref="27" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                      <Component id="foto" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+              <Component id="dirreccion" min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="bAddNewArticle" min="-2" pref="80" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -300,14 +280,6 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel8">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Agency FB" size="18" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Incluye una foto de la prenda"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="bLoadColor">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -338,24 +310,6 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
       </AuxValues>
     </Component>
-    <Container class="javax.swing.JPanel" name="foto">
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-      </AuxValues>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="101" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-    </Container>
     <Container class="javax.swing.JPanel" name="jPanel2">
 
       <Layout>
@@ -371,25 +325,5 @@
         </DimensionLayout>
       </Layout>
     </Container>
-    <Component class="javax.swing.JButton" name="bLoadPhoto1">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="cc" type="rgb"/>
-        </Property>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Agency FB" size="18" style="1"/>
-        </Property>
-        <Property name="mnemonic" type="int" value="83"/>
-        <Property name="text" type="java.lang.String" value="Subir foto"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder roundedCorners="true" thickness="2"/>
-          </Border>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bLoadPhoto1ActionPerformed"/>
-      </Events>
-    </Component>
   </SubComponents>
 </Form>

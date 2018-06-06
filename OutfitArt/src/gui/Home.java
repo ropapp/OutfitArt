@@ -22,19 +22,21 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import business.*;
 
 //IMPORTAR LAS CLASES CREADAS EN OTROS PACKAGES
 
 
 public class Home extends javax.swing.JFrame {
-        
-    public static ArticleList AL = new ArticleList();
+    public static ArticleList AL= new ArticleList();
+
+    
     //Lista que contiene todos los añadidos
     
     public Home() throws IOException, ParseException {
         initComponents();
         //DataSet.saveList(AL, "list.txt");
-        AL = FileManager.loadList("list.txt");
+        //AL = FileManager.loadList("list.txt");
         getContentPane().setBackground(new java.awt.Color(102,102,102));
         setResizable(false);
         setLocationRelativeTo(null);

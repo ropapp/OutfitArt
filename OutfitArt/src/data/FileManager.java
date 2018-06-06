@@ -12,13 +12,6 @@ import java.io.PrintWriter;
 import java.text.ParseException;
 
 public class FileManager {
-    public static void main(String[] args) {
-        try {
-            new FileManager();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     public FileManager() throws Exception {
         saveList(AL, "list.txt");

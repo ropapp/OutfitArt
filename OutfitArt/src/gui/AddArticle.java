@@ -63,12 +63,9 @@ public class AddArticle extends javax.swing.JFrame {
         ocasionIn = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         descripcionIn = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
         bLoadColor = new javax.swing.JButton();
         dirreccion = new javax.swing.JLabel();
-        foto = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        bLoadPhoto1 = new javax.swing.JButton();
 
         jColorChooser1.setFont(new java.awt.Font("Agency FB", 0, 12)); // NOI18N
 
@@ -160,9 +157,6 @@ public class AddArticle extends javax.swing.JFrame {
         descripcionIn.setBackground(new java.awt.Color(204, 204, 204));
         descripcionIn.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
 
-        jLabel8.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jLabel8.setText("Incluye una foto de la prenda");
-
         bLoadColor.setBackground(new java.awt.Color(204, 204, 204));
         bLoadColor.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
         bLoadColor.setMnemonic('S');
@@ -176,17 +170,6 @@ public class AddArticle extends javax.swing.JFrame {
 
         dirreccion.setFont(new java.awt.Font("Agency FB", 0, 14)); // NOI18N
 
-        javax.swing.GroupLayout fotoLayout = new javax.swing.GroupLayout(foto);
-        foto.setLayout(fotoLayout);
-        fotoLayout.setHorizontalGroup(
-            fotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        fotoLayout.setVerticalGroup(
-            fotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 101, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -197,17 +180,6 @@ public class AddArticle extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 34, Short.MAX_VALUE)
         );
-
-        bLoadPhoto1.setBackground(new java.awt.Color(204, 204, 204));
-        bLoadPhoto1.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        bLoadPhoto1.setMnemonic('S');
-        bLoadPhoto1.setText("Subir foto");
-        bLoadPhoto1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        bLoadPhoto1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bLoadPhoto1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -222,13 +194,6 @@ public class AddArticle extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dirreccion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bLoadPhoto1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(foto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -240,6 +205,7 @@ public class AddArticle extends javax.swing.JFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dirreccion, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tipoIn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ocasionIn, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -267,18 +233,9 @@ public class AddArticle extends javax.swing.JFrame {
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(descripcionIn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bLoadPhoto1)
-                        .addGap(11, 11, 11)
-                        .addComponent(dirreccion, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(foto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(80, 80, 80)
+                .addComponent(dirreccion, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addComponent(bAddNewArticle, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -312,11 +269,11 @@ public class AddArticle extends javax.swing.JFrame {
         Article article = new Article(type, color, ocasion, description);
         
         AL.insertAtEnd(article);
-        try {
-            FileManager.saveList(AL, "list.txt");
-        } catch (IOException ex) {
-            Logger.getLogger(AddArticle.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        //try {
+          //  FileManager.saveList(AL, "list.txt");
+        //} catch (IOException ex) {
+          //  Logger.getLogger(AddArticle.class.getName()).log(Level.SEVERE, null, ex);
+        //}
         
         AddArticle obj=new AddArticle();
         obj.setVisible(true);
@@ -353,10 +310,6 @@ public class AddArticle extends javax.swing.JFrame {
         color [2]=c.getBlue();
         //jLabel1.setText("R: "+c.getRed()+"   G: "+c.getGreen()+"   B:"+c.getBlue()+"   Hexagesimal: #"+Integer.toHexString( c.getRGB() & 0x00ffffff ));
     }//GEN-LAST:event_bLoadColorActionPerformed
-
-    private void bLoadPhoto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLoadPhoto1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bLoadPhoto1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -397,10 +350,8 @@ public class AddArticle extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bAddNewArticle;
     private javax.swing.JButton bLoadColor;
-    private javax.swing.JButton bLoadPhoto1;
     private javax.swing.JTextField descripcionIn;
     public static javax.swing.JLabel dirreccion;
-    public static javax.swing.JPanel foto;
     private javax.swing.JColorChooser jColorChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -408,7 +359,6 @@ public class AddArticle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JComboBox<String> ocasionIn;

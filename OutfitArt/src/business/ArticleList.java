@@ -6,7 +6,6 @@ import java.io.OutputStreamWriter;
 
 
 public class ArticleList {
-
 	Article head=null;
         int size = 0;
 
@@ -120,8 +119,7 @@ public class ArticleList {
                         }
                         size--;
                     }
-                }
-                
+                }            
                 
                  
 }

@@ -77,8 +77,11 @@ public class Graph {
             
             for(int k =1;k<4;k++){
                 //The Node with the maximum weight
-                Edge e=outfit[k-1].edges.toArray()[k-1];
-                outfit[k]=articles[i][k].search(e.output.id); 
+                EdgeList edges=outfit[k-1].edges;
+                if(edges!=null | !edges.isEmpty()){
+                    Edge e=edges.toArray()[k-1];
+                    outfit[k]=articles[i][k].search(e.output.id);
+                }
             }
             
             return outfit;

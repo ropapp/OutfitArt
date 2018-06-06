@@ -155,17 +155,24 @@ public class Article{
 	 */
 	public static Article random() {
             Color c = HSL.randomColor();
-            int param = (int) ((Math.random()*4)+1);
+            int param = (int) (Math.random() * 4)+1;
             String str="";//ocassion
             switch(param){
                 case(1):
                     str="Universidad";
+                    break;
                 case(2):
                     str="Cita";
+                    break;
                 case(3):
                     str="Evento Formal";
+                    break;
                 case(4):
                     str="Deporte";
+                    break;
+                default:
+                    str="";
+                    break;
             }
             
             return new Article(param,c,str);
@@ -185,6 +192,11 @@ public class Article{
 
         @Override
 	public String toString() {
-		return this.ocassion;
+		return this.ocassion+" "+Integer.toString(type)+" "+Integer.toHexString(color.getRGB());
 	}
+        
+        public Article copy(){
+            Article cloned = new Article(this.type,this.color,this.ocassion);
+            return cloned;
+        }
 }
