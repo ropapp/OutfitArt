@@ -10,5 +10,8 @@ package business;
  * @author jucat
  */
 public class TestClass {
-    
+    //this is just a Test Class 
+    public static void main(String[] args){
+        System.out.println("hello world");
+    }
 }
