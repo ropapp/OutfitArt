@@ -27,15 +27,12 @@ public class Article extends Clothes{
 		this.color= color;
 	}
 	
-	public Article(int type, Color rgb, float[] metadata) {
+	public Article(int type, Color rgb, String descriprion) {
 		this(type, rgb);
-		this.metadata=metadata;
+		this.description = description;
 	}
 	
-	public Article(int type, Color rgb, float[] metadata, String description) {
-		this(type,rgb,metadata);
-		this.description=description;
-	}
+        
 
 	
 	/**
