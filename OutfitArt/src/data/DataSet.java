@@ -1,6 +1,6 @@
 package data;
 
-import businessLogic.*;
+import business.*;
 
 public class DataSet {
 	

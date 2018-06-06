@@ -1,4 +1,4 @@
-package businessLogic;
+package business;
 
 class Node {
 	Node prev=null,next=null;
@@ -93,20 +93,7 @@ public class List {
 
 }
 
-class EdgeList extends List{
-	Edge max;
-	
-	public void put(Edge e) {
-		if(this.isEmpty()) 
-			this.max=e;
-		else {
-			if(e.weight>max.weight) max=e;
-		}
-		super.put(e);
-	}
-	
-	
-}
+
 
 
 

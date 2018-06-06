@@ -8,7 +8,7 @@ import java.awt.Color;
  * @author jucat
  *
  */
-public class Article extends Clothes{
+public class Article extends Node{
 	int type;
 	Color color;
 	String description="";
@@ -97,24 +97,8 @@ public class Article extends Clothes{
 	 * @return randomArticle
 	 */
 	public static Article random() {
-		Color c = HSL.randomColor();
-		int par =(int) (Math.random()*7+1);
-		if(par%2==0) {
-			int type = (int)(Math.random()*4 + 1);
-			float m1 = (float) Math.random();
-			float m2 = (float) Math.random();
-			float[] meta = new float[] {m1,m2};
-			Article randomArticle = new Article(type, c, meta);
-			return randomArticle;
-			
-		}else {
-			int metadata = (int) (Math.random()*5);
-			int type = (int)(Math.random()*4 + 1);
-			String[] str= new String[]{"formal","cold","rainy","sport","sunny","hot"};
-			float[] meta = new Clothes().hmap.get(str[metadata]);
-			Article randomArticle = new Article(type, c, meta);
-			return randomArticle;
-		}
+            //TODO implement random article generation
+            return null;
 	}
 
 	public int getType() {
